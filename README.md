@@ -1,8 +1,6 @@
 # alx-low_level_programming
 
-## Printf Project work
-
-## Run/Execute
+### Run/Execute
 
 ```c
 make; make test
