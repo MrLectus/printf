@@ -5,5 +5,5 @@
 ## Run/Execute
 
 ```c
-make; make run
+make; make test
 ```

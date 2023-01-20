@@ -22,8 +22,8 @@ $(BINARY):  $(OBJECT)
 %.o: %.c
 	$(CC) $(CFLAG) -c $(^) -o $(@)
 
-.PHONY: run
-run:
+.PHONY: test
+test:
 	./$(BINARY)
 
 .PHONY: clean
