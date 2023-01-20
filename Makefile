@@ -1,12 +1,12 @@
 CC=gcc
 
-CODEDIRS=.
+CODEDIRS=. test
 
-BINARY=$(foreach D,build,$(D)/main)
+BINARY=$(foreach D,test,$(D)/main)
 
 INCLUDEDIR=.
 
-CFLAG=-Wall -Werror -Wextra -std=gnu89  \
+CFLAG=-Wno-format -Wall -Wall -Werror -Wextra -pedantic -std=gnu89  \
 	  $(foreach D,$(INCLUDEDIR), -I$(D))
 
 CFILES=$(foreach D,$(CODEDIRS),$(wildcard $(D)/*.c))
