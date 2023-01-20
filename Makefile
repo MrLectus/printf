@@ -41,3 +41,7 @@ stats:
 .PHONY: memtest
 memtest: $(BINARY)
 	heapusage  $(BINARY)
+
+.PHONY: betty
+betty:
+	betty *.c
