@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 #include <stdio.h>
 
 /**
@@ -8,9 +9,11 @@
  *
  */
 
-void task_char_0(int character)
+void task_char_0(int character, va_list ap)
 {
-	_putchar(character);
+	character = va_arg(ap, int);
+	if (character)
+		_putchar(character);
 }
 
 /**
@@ -20,10 +23,14 @@ void task_char_0(int character)
  *
  */
 
-void task_string_0(char *string)
+void task_string_0(char *string, va_list ap)
 {
-	while (*string)
+	string = va_arg(ap, char *);
+	if (string)
 	{
-		_putchar(*string++);
+		while (*string)
+		{
+			_putchar(*string++);
+		}
 	}
 }
