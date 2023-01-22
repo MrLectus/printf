@@ -31,11 +31,12 @@ int _printf(const char *fmt, ...)
 {
 	char *string;
 	va_list ap;
-	int c;
+	int c, len;
 	size_t bin;
 
 	c = 0, bin = 0;
 	string = NULL;
+	len = _strlen(fmt);
 
 	va_start(ap, fmt);
 	for (; *fmt; fmt++)
@@ -66,5 +67,5 @@ int _printf(const char *fmt, ...)
 		}
 	}
 	va_end(ap);
-	return (_strlen(fmt));
+	return (len);
 }
