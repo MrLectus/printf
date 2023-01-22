@@ -1,7 +1,23 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
+/**
+ * _strlen - Entry point
+ * @fmt: param
+ *
+ * Return: Always 0 (Success)
+ */
+
+int _strlen(const char *fmt)
+{
+	int count;
+	count = 0;
+	while (*fmt++)
+		count++;
+	return (count);
+}
 /**
  * _printf - Entry point
  * @fmt: param
@@ -12,10 +28,11 @@
 int _printf(const char *fmt, ...)
 {
 	char *string;
+	void *addr;
 	va_list ap;
-	int c;
+	int c, bin;
 
-	c = 0;
+	c = 0, bin = 0;
 	string = NULL;
 
 	va_start(ap, fmt);
@@ -34,8 +51,16 @@ int _printf(const char *fmt, ...)
 		case 's':
 			task_string_0(string, ap);
 			break;
+		case 'b':
+			bin = va_arg(ap, int);
+			task_bin(bin, ap);
+			break;
+		case 'p':
+			addr = va_arg(ap, void *);
+			task_ptr(addr, ap);
+			break;
 		}
 	}
 	va_end(ap);
-	return (0);
+	return (_strlen(fmt));
 }
