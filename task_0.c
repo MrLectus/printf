@@ -8,9 +8,8 @@
  *
  */
 
-void task_char_0(int character, va_list ap)
+void task_char_0(int character)
 {
-	character = va_arg(ap, int);
 	_putchar(character);
 }
 
@@ -21,9 +20,8 @@ void task_char_0(int character, va_list ap)
  *
  */
 
-void task_string_0(char *string, va_list ap)
+void task_string_0(char *string)
 {
-	string = va_arg(ap, char *);
 	while (*string)
 	{
 		_putchar(*string++);

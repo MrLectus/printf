@@ -9,7 +9,7 @@
  *
  */
 
-void task_bin(int nums, va_list ap)
+void task_bin(size_t nums, va_list ap)
 {
 	if (nums)
 	{

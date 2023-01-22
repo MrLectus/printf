@@ -49,10 +49,12 @@ int _printf(const char *fmt, ...)
 		switch (*++fmt)
 		{
 		case 'c':
-			task_char_0(c, ap);
+			c = va_arg(ap, int);
+			task_char_0(c);
 			break;
 		case 's':
-			task_string_0(string, ap);
+			string = va_arg(ap, char *);
+			task_string_0(string);
 			break;
 		case 'b':
 			bin = va_arg(ap, size_t);
