@@ -28,7 +28,7 @@ int _strlen(const char *fmt)
 int _printf(const char *fmt, ...)
 {
 	char *string;
-	void *addr;
+	/*void *addr;*/
 	va_list ap;
 	int c, bin;
 
@@ -55,10 +55,10 @@ int _printf(const char *fmt, ...)
 			bin = va_arg(ap, int);
 			task_bin(bin, ap);
 			break;
-		case 'p':
-			addr = va_arg(ap, void *);
-			task_ptr(addr, ap);
-			break;
+			/* case 'p':
+				addr = va_arg(ap, void *);
+				task_ptr(addr, ap);
+				break; */
 		}
 	}
 	va_end(ap);
