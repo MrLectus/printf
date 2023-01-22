@@ -30,7 +30,8 @@ int _printf(const char *fmt, ...)
 	char *string;
 	/*void *addr;*/
 	va_list ap;
-	int c, bin;
+	int c;
+	size_t bin;
 
 	c = 0, bin = 0;
 	string = NULL;
@@ -52,7 +53,7 @@ int _printf(const char *fmt, ...)
 			task_string_0(string, ap);
 			break;
 		case 'b':
-			bin = va_arg(ap, int);
+			bin = va_arg(ap, size_t);
 			task_bin(bin, ap);
 			break;
 			/* case 'p':
