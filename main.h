@@ -3,6 +3,7 @@
 #include <limits.h>
 #include <stdarg.h>
 #include <stdio.h>
+#define NULL_STRING "(null)"
 int _printf(const char *fmt, ...);
 void task_char_0(int character, va_list ap);
 void task_string_0(char *string, va_list ap);

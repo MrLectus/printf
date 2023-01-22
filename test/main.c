@@ -39,5 +39,9 @@ int main(void)
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
 	_printf("%b\n", 98);
+	_printf("character %c\n");
+	_printf("string %s\n", NULL);
+	_printf("percent %%\n");
+	printf("percent %%\n");
 	return (0);
 }

@@ -48,6 +48,9 @@ int _printf(const char *fmt, ...)
 		}
 		switch (*++fmt)
 		{
+		case '%':
+			_putchar('%');
+			break;
 		case 'c':
 			task_char_0(c, ap);
 			break;
