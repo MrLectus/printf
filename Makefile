@@ -6,7 +6,7 @@ BINARY=$(foreach D,test,$(D)/main)
 
 INCLUDEDIR=.
 
-CFLAG=-Wno-format -Wall -Wall -Werror -Wextra -pedantic -std=gnu89  \
+CFLAG=-Wno-format -Wall -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format-invalid-specifier \
 	  $(foreach D,$(INCLUDEDIR), -I$(D))
 
 CFILES=$(foreach D,$(CODEDIRS),$(wildcard $(D)/*.c))
